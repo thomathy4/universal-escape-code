@@ -1,0 +1,5 @@
+name: ascii_unicode_logic
+title: ASCII/Unicode Logic Code
+description: 'Encode/decode sentential logic and Unicode between ESC[U00ACm and \u00AC. Use when the user asks to encode, decode or convert logic or Unicode.'
+include_in_prompt: true
+availability: {confidential_vm: true, needs_speech: false}
