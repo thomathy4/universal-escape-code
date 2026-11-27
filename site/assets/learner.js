@@ -32,7 +32,19 @@
   }
 
   var W = readJSON(W_COOKIE, {});
+  if (!W || typeof W !== "object" || Array.isArray(W)) W = {};
+  Object.keys(W).forEach(function (key) {
+    if (typeof W[key] !== "number" || !isFinite(W[key]) || Math.abs(W[key]) > 20) {
+      delete W[key];
+    }
+  });
   var stats = readJSON(S_COOKIE, { trials: 0, correct: 0 });
+  if (!stats || typeof stats !== "object" ||
+      !Number.isSafeInteger(stats.trials) || stats.trials < 0 ||
+      !Number.isSafeInteger(stats.correct) || stats.correct < 0 ||
+      stats.correct > stats.trials) {
+    stats = { trials: 0, correct: 0 };
+  }
 
   /* ------------------------------------------------------------ features */
   function tokens(text) {
@@ -286,7 +298,7 @@
     var pairs = [
       ["trials", stats.trials],
       ["right", stats.correct],
-      ["accuracy", accuracy + "%"],
+      ["user-confirmed agreement", accuracy + "%"],
       ["weights", Object.keys(W).length]
     ];
     pairs.forEach(function (pair) {
@@ -328,13 +340,13 @@
     var fidelityBox = document.getElementById("lfidelity");
     fidelityBox.textContent =
       units.length + " basic unit" + (units.length === 1 ? "" : "s") +
-      " (" + named.length + " matched) \u00b7 rebuild fidelity " +
-      Math.round(score * 100) + "%" +
-      (score > 0.999 ? " \u2014 exact round trip" : "");
+      " (" + named.length + " matched) \u00b7 token overlap " +
+      Math.round(score * 100) + "% \u00b7 normalized text " +
+      (normalize(clean) === normalize(built) ? "matches" : "differs");
 
     status.className = "status good";
     status.textContent = tree.kind === "op"
-      ? "Top rule: " + tree.rule.name + " at " + Math.round(tree.p * 100) + "% attention."
+      ? "Selected structural rule: " + tree.rule.name + " (" + Math.round(tree.p * 100) + "% attention)."
       : "No rule fits; read as one unit.";
     drawStats();
   }
