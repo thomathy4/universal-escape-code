@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proof and consequence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="units/set-03-proof.html" data-kind="units">
+<header class="topbar">
+  <a class="brand" href="../index.html">Symbology</a>
+  <nav class="pagenav"><a class="navlink" rel="prev" href="../units/set-02-constants.html">← Equivalence</a><a class="navlink" rel="next" href="../units/set-04-argument.html">Argument →</a></nav>
+  <div class="cookiebar" id="cookiebar" aria-live="polite"></div>
+</header>
+<main>
+<p class="crumb"><a href="../index.html">master page</a> / unit set</p>
+<h1>Proof and consequence</h1>
+<p class="lede">What follows from what: syntactic proof, semantic entailment, and the two negations of them. 4 units. Each row is one cell: the encoded character on the left, under its name, and its definition on the right.</p>
+<div class="toolbar">
+  <button type="button" data-walk="start">Walk this page</button>
+  <button type="button" data-walk="stop">Stop</button>
+  <span class="hint">or press <kbd>j</kbd> / <kbd>k</kbd> to move, <kbd>Enter</kbd> to follow the first related unit.</span>
+</div>
+<figure class="figure"><svg class="map" viewBox="0 0 720 260" role="img" aria-label="units on this page and the definitions they share"><line class="edge" x1="360.0" y1="42.0" x2="660.0" y2="130.0"/><line class="edge" x1="360.0" y1="42.0" x2="360.0" y2="218.0"/><line class="edge" x1="660.0" y1="130.0" x2="360.0" y2="218.0"/><line class="edge" x1="660.0" y1="130.0" x2="60.0" y2="130.0"/><line class="edge" x1="360.0" y1="218.0" x2="60.0" y2="130.0"/><a href="#u-22A2" class="node"><circle cx="360.0" cy="42.0" r="17"/><text x="360.0" y="48.0">⊢</text><title>RIGHT TACK</title></a><a href="#u-22A8" class="node"><circle cx="660.0" cy="130.0" r="17"/><text x="660.0" y="136.0">⊨</text><title>TRUE</title></a><a href="#u-22AC" class="node"><circle cx="360.0" cy="218.0" r="17"/><text x="360.0" y="224.0">⊬</text><title>DOES NOT PROVE</title></a><a href="#u-22AD" class="node"><circle cx="60.0" cy="130.0" r="17"/><text x="60.0" y="136.0">⊭</text><title>NOT TRUE</title></a></svg><figcaption>Lines join units whose definitions share words. A node is a link to its row.</figcaption></figure>
+<table class="grid">
+<caption>Proof and consequence — 4 units</caption>
+<tbody>
+<tr class="row" id="u-22A2" data-unit="22A2" tabindex="0">
+  <th class="cell" scope="row">
+    <span class="cell-name">RIGHT TACK</span>
+    <span class="cell-cp">U+22A2</span>
+  </th>
+  <td class="sym"><svg class="delin" viewBox="0 0 12 40" aria-hidden="true" focusable="false"><line x1="6" y1="0" x2="6" y2="40"/><line x1="2" y1="20" x2="10" y2="20"/></svg><span class="glyph">⊢</span><span class="forms"><code>&lt;ESC&gt;[U22A2m</code> <code>\u22A2</code></span></td>
+  <td class="def"><p>Proves: p can be derived (proved) from the premises by the rules of the system</p><p class="alias">alias <code>|-</code> · long form <code>[PROVES]</code></p><p class="rel">related: <a href="#u-22AC" title="shared definition words: 22%">⊬</a> <a href="#u-22A8" title="shared definition words: 11%">⊨</a> <a href="#u-22AD" title="shared definition words: 10%">⊭</a></p></td>
+</tr>
+<tr class="row" id="u-22A8" data-unit="22A8" tabindex="0">
+  <th class="cell" scope="row">
+    <span class="cell-name">TRUE</span>
+    <span class="cell-cp">U+22A8</span>
+  </th>
+  <td class="sym"><svg class="delin" viewBox="0 0 12 40" aria-hidden="true" focusable="false"><line x1="6" y1="0" x2="6" y2="40"/><line x1="2" y1="20" x2="10" y2="20"/></svg><span class="glyph">⊨</span><span class="forms"><code>&lt;ESC&gt;[U22A8m</code> <code>\u22A8</code></span></td>
+  <td class="def"><p>Entails: p is true in every interpretation in which all the premises are true</p><p class="alias">alias <code>|=</code> · long form <code>[ENTAILS]</code></p><p class="rel">related: <a href="#u-22AC" title="shared definition words: 12%">⊬</a> <a href="#u-22AD" title="shared definition words: 12%">⊭</a> <a href="#u-22A2" title="shared definition words: 11%">⊢</a></p></td>
+</tr>
+<tr class="row" id="u-22AC" data-unit="22AC" tabindex="0">
+  <th class="cell" scope="row">
+    <span class="cell-name">DOES NOT PROVE</span>
+    <span class="cell-cp">U+22AC</span>
+  </th>
+  <td class="sym"><svg class="delin" viewBox="0 0 12 40" aria-hidden="true" focusable="false"><line x1="6" y1="0" x2="6" y2="40"/><line x1="2" y1="20" x2="10" y2="20"/></svg><span class="glyph">⊬</span><span class="forms"><code>&lt;ESC&gt;[U22ACm</code> <code>\u22AC</code></span></td>
+  <td class="def"><p>Does not prove: p cannot be derived from the premises</p><p class="alias">long form <code>[NOT-PROVES]</code></p><p class="rel">related: <a href="#u-22AD" title="shared definition words: 25%">⊭</a> <a href="#u-22A2" title="shared definition words: 22%">⊢</a> <a href="#u-22A8" title="shared definition words: 12%">⊨</a></p></td>
+</tr>
+<tr class="row" id="u-22AD" data-unit="22AD" tabindex="0">
+  <th class="cell" scope="row">
+    <span class="cell-name">NOT TRUE</span>
+    <span class="cell-cp">U+22AD</span>
+  </th>
+  <td class="sym"><svg class="delin" viewBox="0 0 12 40" aria-hidden="true" focusable="false"><line x1="6" y1="0" x2="6" y2="40"/><line x1="2" y1="20" x2="10" y2="20"/></svg><span class="glyph">⊭</span><span class="forms"><code>&lt;ESC&gt;[U22ADm</code> <code>\u22AD</code></span></td>
+  <td class="def"><p>Does not entail: p is not a semantic consequence of the premises</p><p class="alias">long form <code>[NOT-ENTAILS]</code></p><p class="rel">related: <a href="#u-22AC" title="shared definition words: 25%">⊬</a> <a href="#u-22A8" title="shared definition words: 12%">⊨</a> <a href="#u-22A2" title="shared definition words: 10%">⊢</a></p></td>
+</tr>
+</tbody>
+</table>
+</main>
+<footer class="foot">
+  <p>Generated by <code>site/build_site.py</code> from this project's own symbol data. Every page is plain HTML, SVG and JavaScript — nothing here needs a server to think.</p>
+  <p><a href="../index.html">Master page</a> · <a href="../learner.html">The learner</a></p>
+</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>
